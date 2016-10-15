@@ -7,8 +7,8 @@ public class TransitionTest {
     public void getStateDestination_should_return_destination_state() throws Exception {
         State sourceState = new State("q1");
         State destinationState = new State("q2");
-        char alphabate = '0';
-        Transition transition = new Transition(sourceState, alphabate, destinationState);
+        char alphabet = '0';
+        Transition transition = new Transition(sourceState, alphabet, destinationState);
         assertEquals(transition.getStateDestination(),destinationState);
     }
 
@@ -16,8 +16,8 @@ public class TransitionTest {
     public void getStateSourceShould_return_source_state() throws Exception {
         State sourceState = new State("q1");
         State destinationState = new State("q2");
-        char alphabate = '0';
-        Transition transition = new Transition(sourceState, alphabate, destinationState);
+        char alphabet = '0';
+        Transition transition = new Transition(sourceState, alphabet, destinationState);
         assertEquals(transition.getStateSource(),sourceState);
     }
 
@@ -25,8 +25,8 @@ public class TransitionTest {
     public void getCharacter_should_return_char() throws Exception {
         State sourceState = new State("q1");
         State destinationState = new State("q2");
-        char alphabate = '0';
-        Transition transition = new Transition(sourceState, alphabate, destinationState);
-        assertEquals(transition.getAlphabet(),alphabate);
+        char alphabet = '0';
+        Transition transition = new Transition(sourceState, alphabet, destinationState);
+        assertEquals(transition.getAlphabet(),alphabet);
     }
 }
