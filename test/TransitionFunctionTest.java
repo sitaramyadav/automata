@@ -12,7 +12,6 @@ public class TransitionFunctionTest {
         TransitionFunction transitionFunction = new TransitionFunction();
         transitionFunction.addTransition(transition);
         State nextState = transitionFunction.addTransition(q1,alphabet);
-        System.out.println(nextState);
         assertEquals(nextState, q2);
 
     }
