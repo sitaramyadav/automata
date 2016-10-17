@@ -8,9 +8,12 @@ public class TransitionFunctionTest {
         State q1 = new State("q1");
         State q2 = new State("q2");
         char alphabet = '0';
-        TransitionFunction transitionFunction = new TransitionFunction(q1,alphabet,q2);
-        transitionFunction.addTransition();
-        assertEquals(transitionFunction.addTransition(),q2);
+        Transition transition = new Transition(q1,'0',q2);
+        TransitionFunction transitionFunction = new TransitionFunction();
+        transitionFunction.addTransition(transition);
+        State nextState = transitionFunction.addTransition(q1,alphabet);
+        System.out.println(nextState);
+        assertEquals(nextState, q2);
 
     }
 

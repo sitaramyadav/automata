@@ -41,5 +41,8 @@ public class Transition {
         return result;
     }
 
+    public State nextState(char alphabet) {
+        return this.alphabet == alphabet ? this.getStateDestination():null;
+    }
 }
 

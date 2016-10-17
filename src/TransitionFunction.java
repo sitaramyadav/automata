@@ -2,20 +2,26 @@ import java.util.*;
 
 
 public class TransitionFunction {
-    private Transition transition;
     private Map<State, List> table = new HashMap<>();
 
-    public TransitionFunction(State src, char alphabet, State destination) {
-        this.transition = new Transition(src,alphabet,destination);
 
-    }
-
-    public State  addTransition() {
-         State state = this.transition.getStateSource();
+    public void  addTransition(Transition transition) {
+         State state = transition.getStateSource();
          List transitions = table.get(state);
         if (transitions == null) transitions = new ArrayList<>();
         transitions.add(transition);
         table.put(state, transitions);
-        return transition.getStateDestination();
+    }
+
+    public State addTransition(State currentState, char alphabet) {
+        State state = null;
+        List<Transition> transitions = table.get(currentState);
+        if (transitions == null)
+            throw new RuntimeException("Transitions Not Defined for this state");
+        for (Transition transition : transitions) {
+            state = transition.nextState(alphabet);
+            break;
+        }
+        return state;
     }
 }
