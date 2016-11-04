@@ -14,6 +14,7 @@ q1,0,q2
 ...
 ...
 
+                 }
 
 
 Here is a JSON of examples that you can use. The JSON file has a list of DFAs.
