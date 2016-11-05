@@ -1,3 +1,6 @@
+package com.step.dfa.exception;
+
+import com.step.exception.IllegalCharException;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

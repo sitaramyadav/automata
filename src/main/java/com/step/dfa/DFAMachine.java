@@ -1,3 +1,7 @@
+package com.step.dfa;
+
+import com.step.exception.IllegalCharException;
+
 import java.util.HashSet;
 import java.util.Set;
 

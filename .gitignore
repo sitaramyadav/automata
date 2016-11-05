@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
 Would skip repository https:/github.com/sitaramyadav/automata.git
-out/production/automata/TransitionFunction.class
+out/production/automata/com.step.dfa.TransitionFunction.class
 out/test/automata/TransitionFunctionTest.class

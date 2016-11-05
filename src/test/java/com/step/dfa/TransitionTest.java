@@ -1,3 +1,5 @@
+import com.step.dfa.State;
+import com.step.dfa.Transition;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

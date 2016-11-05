@@ -21,7 +21,7 @@ Here is a JSON of examples that you can use. The JSON file has a list of DFAs.
  Each DFA is of the following format.
 
 :name "odd number of zeroes",
-:type "dfa",
+:type "com.step.dfa",
 :tuple {:states #{:q1 :q2},
 :alphabets #{"1" "0"},
 :delta {:q1 {0 :q2, 1 :q1}, :q2 {0 :q1, 1 :q2}},

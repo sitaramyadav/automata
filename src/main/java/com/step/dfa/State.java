@@ -1,3 +1,4 @@
+package com.step.dfa;
 
 public class State {
     private String stateName;

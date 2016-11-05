@@ -1,3 +1,5 @@
+package com.step.dfa;
+
 public class Transition {
     private State stateSource;
     private char alphabet;
