@@ -36,6 +36,15 @@ public class Transition {
     }
 
     @Override
+    public String toString() {
+        return "Transition{" +
+                "stateSource=" + stateSource +
+                ", alphabet=" + alphabet +
+                ", stateDestination=" + stateDestination +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         int result = stateSource != null ? stateSource.hashCode() : 0;
         result = 31 * result + (int) alphabet;
@@ -44,7 +53,7 @@ public class Transition {
     }
 
     public State nextState(char alphabet) {
-        return this.alphabet == alphabet ? this.getStateDestination():null;
+        return getAlphabet() == alphabet ? this.getStateDestination():this.getStateSource();
     }
 }
 

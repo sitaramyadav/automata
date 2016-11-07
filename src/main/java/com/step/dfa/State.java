@@ -9,24 +9,31 @@ public class State {
         this.stateName = name;
     }
 
-    public String getName() {
-        return stateName;
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        State state1 = (State) o;
+
+        return stateName.equals(state1.stateName);
+
     }
 
-    public Boolean isInitialState() {
-        return (initialState == Boolean.TRUE);
+    @Override
+    public String toString() {
+        return "State{" +
+                "stateName='" + stateName + '\'' +
+                ", initialState=" + initialState +
+                ", finalState=" + finalState +
+                '}';
     }
 
-    public Boolean isFinalState() {
-        return (finalState == Boolean.TRUE);
-    }
-
-    public void setInitialState(Boolean initialState) {
-        this.initialState = initialState;
-    }
-
-    public void setFinalState(Boolean finalState) {
-        this.finalState = finalState;
+    @Override
+    public int hashCode() {
+        return stateName.hashCode();
     }
 
 }

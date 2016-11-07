@@ -1,4 +1,4 @@
-package com.step.dfa.exception;
+package com.step.exception;
 
 import com.step.exception.IllegalCharException;
 import org.junit.Test;

@@ -1,3 +1,5 @@
+package com.step.dfa;
+
 import com.step.dfa.State;
 import com.step.dfa.Transition;
 import org.junit.Test;
