@@ -2,8 +2,7 @@ package com.step.dfa;
 import com.step.exception.IllegalCharException;
 import org.junit.Test;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -47,6 +46,7 @@ public class DFAMachineTest {
         HashSet alphabetSet = new HashSet<>();
         alphabetSet.add('1');
         alphabetSet.add('0');
+
 
         TransitionFunction transitionFunction = new TransitionFunction();
         transitionFunction.addTransition(new Transition(initialState, '0', finalState));

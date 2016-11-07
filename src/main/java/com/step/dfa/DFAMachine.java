@@ -47,4 +47,40 @@ public class DFAMachine {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        DFAMachine that = (DFAMachine) o;
+
+        if (setOfStates != null ? !setOfStates.equals(that.setOfStates) : that.setOfStates != null) return false;
+        if (alphabetSet != null ? !alphabetSet.equals(that.alphabetSet) : that.alphabetSet != null) return false;
+        if (transitionFunction != null ? !transitionFunction.equals(that.transitionFunction) : that.transitionFunction != null)
+            return false;
+        if (initialState != null ? !initialState.equals(that.initialState) : that.initialState != null) return false;
+        return setOfFinalState != null ? setOfFinalState.equals(that.setOfFinalState) : that.setOfFinalState == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = setOfStates != null ? setOfStates.hashCode() : 0;
+        result = 31 * result + (alphabetSet != null ? alphabetSet.hashCode() : 0);
+        result = 31 * result + (transitionFunction != null ? transitionFunction.hashCode() : 0);
+        result = 31 * result + (initialState != null ? initialState.hashCode() : 0);
+        result = 31 * result + (setOfFinalState != null ? setOfFinalState.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "DFAMachine{" +
+                "setOfStates=" + setOfStates +
+                ", alphabetSet=" + alphabetSet +
+                ", transitionFunction=" + transitionFunction +
+                ", initialState=" + initialState +
+                ", setOfFinalState=" + setOfFinalState +
+                '}';
+    }
 }

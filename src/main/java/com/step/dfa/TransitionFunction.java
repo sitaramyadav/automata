@@ -5,7 +5,6 @@ import java.util.*;
 
 public class TransitionFunction {
     private Map<State, List<Transition>> table = new HashMap<>();
-//    private State state;
 
     public void addTransition(Transition transition) {
         State state = transition.getStateSource();
@@ -20,6 +19,22 @@ public class TransitionFunction {
         return "TransitionFunction{" +
                 "table=" + table +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TransitionFunction that = (TransitionFunction) o;
+
+        return table != null ? table.equals(that.table) : that.table == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return table != null ? table.hashCode() : 0;
     }
 
     public State findCurrentState(State currentState, char alphabet) {
