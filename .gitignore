@@ -3,3 +3,4 @@
 Would skip repository https:/github.com/sitaramyadav/automata.git
 out/production/automata/com.step.dfa.TransitionFunction.class
 out/test/automata/TransitionFunctionTest.class
+out/production/automata/com/step/data/
